@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PDF 预览</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            font-family: Arial, sans-serif;
-        }
-        .pdf-container {
-            width: 100%;
-            height: 100vh; /* 让 iframe 占满整个屏幕高度 */
-            box-sizing: border-box;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none; /* 去掉边框 */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>全屏图片</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 保持比例，裁剪多余部分 */
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <h2 style="text-align:center; padding:10px;">PDF 文件预览</h2>
-    <div class="pdf-container">
-        <!-- 这里的 /example.pdf 就是 static/example.pdf -->
-        <iframe src="/photos.pdf"></iframe>
-    </div>
+  <!-- 假设图片放在 static/images/bg.jpg -->
+  <img src="/images/F84EABEB-CA4E-4FD0-A59F-32F77FC172FF_1_105_c.jpeg" alt="全屏背景图">
 </body>
 </html>
